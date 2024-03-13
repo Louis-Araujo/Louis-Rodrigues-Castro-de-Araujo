@@ -1,0 +1,92 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyP4POxda+QosAGDjgxkG5PI",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Louis-Araujo/Louis-Rodrigues-Castro-de-Araujo/blob/main/Pr%C3%A1tica%20na%20aula%20-%2013/03%20-%20M%C3%A9dia%20ponderada%20do%20IFRN\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 23,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "SBDwSBNYaF00",
+        "outputId": "3ed19d43-ba76-4796-e5df-30b10afe533d"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Calculadora de média ponderada do IFRN\n",
+            "Digite o número de alunos:2\n",
+            "\n",
+            "Aluno 1:\n",
+            "Digite a nota 1(com peso 2): 6.0\n",
+            "Digite a nota 2(com peso 3): 7.0\n",
+            "A média ponderada das notas é: 6.60\n",
+            "Aprovado\n",
+            "\n",
+            "Aluno 2:\n",
+            "Digite a nota 1(com peso 2): 4.0\n",
+            "Digite a nota 2(com peso 3): 3.0\n",
+            "A média ponderada das notas é: 3.40\n",
+            "Reprovado\n"
+          ]
+        }
+      ],
+      "source": [
+        "print(\"Calculadora de média ponderada do IFRN\")\n",
+        "\n",
+        "# Perguntando, para quantos alunos, desejo calcular média\n",
+        "num_alunos = int(input(\"Digite o número de alunos:\"))\n",
+        "\n",
+        "for aluno in range(1, num_alunos + 1):\n",
+        "    # imprima o número do aluno da vez\n",
+        "    print(f\"\\nAluno {aluno}:\")\n",
+        "\n",
+        "    # Float, tipagem explícita, para garantir número fracionário\n",
+        "    n1 = float(input(\"Digite a nota 1(com peso 2): \"))\n",
+        "    n2 = float(input(\"Digite a nota 2(com peso 3): \"))\n",
+        "\n",
+        "    # calculo de media ponderada\n",
+        "    media = (n1 * 2 + n2 * 3) / 5\n",
+        "\n",
+        "    # impressão da média\n",
+        "    print(f\"A média ponderada das notas é: {media:.2f}\")\n",
+        "\n",
+        "    # apresentar se o aluno foi aprovado ou não\n",
+        "    if media >= 6:\n",
+        "        print(\"Aprovado\")\n",
+        "    else:\n",
+        "        if media >= 4:\n",
+        "            print(\"Prova final\")\n",
+        "        else:\n",
+        "            print(\"Reprovado\")"
+      ]
+    }
+  ]
+}
