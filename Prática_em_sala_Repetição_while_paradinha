@@ -1,0 +1,81 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyM5CZ+Bf5/KWJSgc6n2lvig",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Louis-Araujo/Louis-Rodrigues-Castro-de-Araujo/blob/main/Pr%C3%A1tica_em_sala_Repeti%C3%A7%C3%A3o_while_paradinha\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Programa de controle de qualidade de água\n",
+        "print(\"Insira o nível de cloro da água para verificar se está dentro do padrão aceito.\")\n",
+        "paradinha = True\n",
+        "#paradinha = 1 #outro exemplo\n",
+        "\n",
+        "while True: #loop infinito // infinete loop\n",
+        "  nivel_cloro = float(input(\"Digite o nível de cloro em mg/L: \"))\n",
+        "  #verificando se o  0.2 > nivel_cloro < 2\n",
+        "  if nivel_cloro < 0.2:\n",
+        "    print(\"Atenção: O nível de cloro está abaixo do padrão aceitável\")\n",
+        "  elif nivel_cloro > 2.0:\n",
+        "    print(\"Atenção: o nível de cloro está acima do padrão aceitável.\")\n",
+        "  else:\n",
+        "    print(\"O nível do cloro está dentro dos padrões aceitáveis.\")\n",
+        "    paradinha = False"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ZuGZzXqA4vhT",
+        "outputId": "2bd763d4-79e2-4941-faf3-443ede68e3b9"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Insira o nível de cloro da água para verificar se está dentro do padrão aceito.\n",
+            "Digite o nível de cloro em mg/L: 2\n",
+            "O nível do cloro está dentro dos padrões aceitáveis.\n",
+            "Digite o nível de cloro em mg/L: 1\n",
+            "O nível do cloro está dentro dos padrões aceitáveis.\n",
+            "Digite o nível de cloro em mg/L: 3\n",
+            "Atenção: o nível de cloro está acima do padrão aceitável.\n",
+            "Digite o nível de cloro em mg/L: 4\n",
+            "Atenção: o nível de cloro está acima do padrão aceitável.\n",
+            "Digite o nível de cloro em mg/L: 0.1\n",
+            "Atenção: O nível de cloro está abaixo do padrão aceitável\n",
+            "Digite o nível de cloro em mg/L: 3\n",
+            "Atenção: o nível de cloro está acima do padrão aceitável.\n",
+            "Digite o nível de cloro em mg/L: 4\n",
+            "Atenção: o nível de cloro está acima do padrão aceitável.\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
