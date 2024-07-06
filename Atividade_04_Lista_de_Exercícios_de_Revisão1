@@ -1,0 +1,414 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyMzoAI9vg/7pDTV3nfo25R3",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Louis-Araujo/Louis-Rodrigues-Castro-de-Araujo/blob/main/Atividade_04_Lista_de_Exerc%C3%ADcios_de_Revis%C3%A3o1\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 2,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "c23dRrg7ye2H",
+        "outputId": "87dcdc63-abae-45ab-a404-127eae47c9fe"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Olá, mundo!\n"
+          ]
+        }
+      ],
+      "source": [
+        "# 1. Escreva um programa que imprima \"Olá, Mundo!\" na tela.\n",
+        "\n",
+        "print('Olá, mundo!')"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# 2. Crie um programa que leia três notas de um aluno e calcule a média final.\n",
+        "\n",
+        "n1 = float(input('Digite a primeira nota: '))\n",
+        "n2 = float(input('Digite a segunda nota: '))\n",
+        "n3 = float(input('Digite a terceira nota: '))\n",
+        "m = (n1 + n2 + n3) / 3\n",
+        "print(f'A média das três notas é: {m}')"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "AJeGA6xyyiOe",
+        "outputId": "17db8f49-2e30-4ac7-e767-a86a000622f8"
+      },
+      "execution_count": 3,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite a primeira nota: 2\n",
+            "Digite a segunda nota: 4\n",
+            "Digite a terceira nota: 6\n",
+            "A média das três notas é: 4.0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# 3. Escreva um programa que calcule a média de notas, permitindo a entrada repetida de notas até que o usuário indique que não deseja mais inserir.\n",
+        "cont = 0\n",
+        "soma = 0\n",
+        "while True:\n",
+        "  n = int(input('Digite uma nota: '))\n",
+        "  soma += n\n",
+        "  cont += 1\n",
+        "  resp = str(input('Deseja adicionar mais uma nota? [S/N]: ')).strip()[0]\n",
+        "  if resp not in 'NnSs':\n",
+        "    resp = str(input('Desculpa, não entendi. Deseja adicionar mais uma nota? [S/N]: ')).strip()[0]\n",
+        "  if resp in 'Nn':\n",
+        "    break\n",
+        "media = soma / cont\n",
+        "print(f'A média das notas que foram informadas é de: {media:.2f}')\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "qz5O3QfkyiFW",
+        "outputId": "afbef174-0197-4c4a-b58b-036b96a56996"
+      },
+      "execution_count": 39,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite uma nota: 6\n",
+            "Deseja adicionar mais uma nota? [S/N]: s\n",
+            "Digite uma nota: 7\n",
+            "Deseja adicionar mais uma nota? [S/N]: s\n",
+            "Digite uma nota: 9\n",
+            "Deseja adicionar mais uma nota? [S/N]: f\n",
+            "Desculpa, não entendi. Deseja adicionar mais uma nota? [S/N]: n\n",
+            "A média das notas que foram informadas é de: 7.33\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# 4. Crie um programa que leia três números e determine o maior deles.\n",
+        "ordem = maior = 0\n",
+        "for c in range(0,3):\n",
+        "  n = int(input('Digite um número: '))\n",
+        "  ordem += 1\n",
+        "  if ordem == 1:\n",
+        "    maior = n\n",
+        "  else:\n",
+        "    if n > maior:\n",
+        "      maior = n\n",
+        "print(f'Entre os números que você digitou, o maior número é: {maior}')\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "1Onvmupayh8d",
+        "outputId": "6c2d7907-d25b-4e5b-d079-8fa1a74b0416"
+      },
+      "execution_count": 6,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite um número: 2\n",
+            "Digite um número: 4\n",
+            "Digite um número: 6\n",
+            "Entre os números que você digitou, o maior número é: 6\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Os parâmetros estabelecidos para o monitoramento da qualidade da água, no Brasil, são definidos pela Resolução CONAMA 357/2005. Os principais parâmetros e seus valores máximos permitidos para águas doces superficiais, que são as mais comuns de serem monitoradas, são: o pH (entre 6,0 e 9,0), a Turbidez (Máximo de 100 UNT (Unidades Nefelométricas de Turbidez)), Oxigênio Dissolvido (OD) (Mínimo de 5 mg/L (miligramas por litro), exceto para águas salobras e salinas, onde o valor mínimo é de 4 mg/L.), Coliformes Termotolerantes (Ausência em 100 mL de água para águas destinadas ao abastecimento público e águas para recreação de contato primário), a Demanda Bioquímica de Oxigênio (DBO) (Máximo de 5 mg/L para Classe 1 (água destinada ao abastecimento humano sem tratamento convencional)), Nitrato (Máximo de 10 mg/L para águas destinadas ao abastecimento humano) e Fosfato Total (Máximo de 0,1 mg/L para águas destinadas ao abastecimento humano).\n",
+        "\n",
+        "Considerando que a água não é salobra ou salina, que é para abastecimento público, para classe 1, foi desenvolvido a lógica da próxima questão."
+      ],
+      "metadata": {
+        "id": "cGrcGHTNs5Xq"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# 5. Desenvolva um programa que monitore a qualidade da água de um reservatório usando um loop while.\n",
+        "# pH_padrão = entre 6.0 e 9.0 / Turbidez = menor ou igual a que 100 / OD = min 5mg/l / Coliformes = ausencia em 100 ml / DBO = até 5mg/l / Nitrato = até 10 mg/l / Fosfato = até 0,1 mg/l\n",
+        "\n",
+        "# ATENÇÃO: FALTA COLOCAR CONDIÇÃO PARA QUE O RESULTADO NÃO POSSA SER DIFERENTE DE S MINUSCULO EM NENHUM DOS PARÂMETROS\n",
+        "\n",
+        "resultado_final = []\n",
+        "print('Seja bem vindo(a) ao Programa de Diagnóstico de Qualidade de Água! insira os dados abaixo para a análise.')\n",
+        "pergunta_inicial = 'S'\n",
+        "while pergunta_inicial in 'Ss':\n",
+        "  resultado = 7\n",
+        "  ph = float(input('Valor do pH: '))\n",
+        "  Turbidez = float(input('Valor da Turbidez em UNT: '))\n",
+        "  OD = float(input('Valor do Oxigênio Dissolvido em mg/L: '))\n",
+        "  CT = float(input('Valor dos Coliformes Termotolerantes em 100ml da amostra: '))\n",
+        "  DBO = float(input('Valor da DBO em mg/L: '))\n",
+        "  Nitrato = float(input('Quantidade de Nitrato em mg/L: '))\n",
+        "  Fosfato = float(input('Quantidade de Fosfato em mg/L: '))\n",
+        "  print('-=-'*30)\n",
+        "  # pH_padrão = entre 6.0 e 9.0\n",
+        "  if ph >= 6.0 and ph <= 9.0:\n",
+        "    print('O pH da amostra se encontra dentro do padrão estabelecido')\n",
+        "    resultado -= 1\n",
+        "  else:\n",
+        "    print('O pH da amostra não está dentro do padrão estabelecido')\n",
+        "  # Turbidez = menor ou igual a que 100\n",
+        "  if Turbidez <= 100:\n",
+        "    print('A turbidez da amostra se encontra dentro do padrão estabelecido')\n",
+        "    resultado -= 1\n",
+        "  else:\n",
+        "    print('A turbidez da amostra não está dentro do padrão estabelecido')\n",
+        "   # OD = min 5mg/l\n",
+        "  if OD >= 5:\n",
+        "    print('O Oxigênio Dissolvido da amostra se encontra dentro do padrão estabelecido')\n",
+        "    resultado -= 1\n",
+        "  else:\n",
+        "    print('O Oxigênio Dissolvido da amostra não está dentro do padrão estabelecido')\n",
+        "  # Coliformes = ausencia em 100 ml\n",
+        "  if CT == 0:\n",
+        "    print('O valor de Coliformes Termotolerantes da amostra está dentro do padrão estabelecido')\n",
+        "    resultado -= 1\n",
+        "  else:\n",
+        "    print('O valor de Coliformes Termotelerântes da amostra não está dentro do padrão estabelecido')\n",
+        "  # DBO = até 5mg/l\n",
+        "  if DBO <= 5:\n",
+        "    print('O DBO da amostra está dentro do padrão estabelecido')\n",
+        "    resultado -= 1\n",
+        "  else:\n",
+        "    print('O DBO da amostra não está dentro do padrão estabelecido')\n",
+        "  # Nitrato = até 10 mg/l\n",
+        "  if Nitrato <= 10:\n",
+        "    print('O Nitrato da amostra está dentro do padrão estabelecido')\n",
+        "    resultado -= 1\n",
+        "  else:\n",
+        "    print('O Nitrato da amostra não está dentro do padrão estabelecido')\n",
+        "  # Fosfato = até 0,1 mg/l\n",
+        "  if Fosfato <= 0.1:\n",
+        "    print('O fosfato total da amostra está dentro do padrão estabelecido')\n",
+        "    resultado -= 1\n",
+        "  else:\n",
+        "    print('O fosfato total da amostra não está dentro do padrão estabelecido')\n",
+        "  print('=-='*30)\n",
+        "  resultado_final.append(resultado) # adiciona o resultado da amostra na lista de resultados\n",
+        "\n",
+        "  pergunta_inicial = str(input('Deseja fazer uma nova análise de qualidade de uma amostra de água [S/N:]')).strip()[0]\n",
+        "  if pergunta_inicial not in 'NnSs':\n",
+        "    pergunta_inicial = str(input('Não entendi. Deseja fazer a análise de qualidade de uma amostra de água [S/N:]')).strip()[0]\n",
+        "  if pergunta_inicial in 'Nn':\n",
+        "    break\n",
+        "print('=-='*30)\n",
+        "\n",
+        "# Verificando o resultado final após todas as amostras\n",
+        "if all(resultado == 0 for resultado in resultado_final):\n",
+        "    print('Todas as amostras de água estão dentro dos padrões. Logo a água está própria para consumo, de acordo com os padrões de qualidade estabelecidos pela Resolução CONAMA 357/2005')\n",
+        "else:\n",
+        "    print('Pelo menos uma das amostras de água NÃO está dentro dos padrões. Logo, de acordo com os padrões de qualidade estabelecidos pela Resolução CONAMA 357/2005, a água está IMPRÓPRIA')\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "pNEtW21RyhzV",
+        "outputId": "51a79914-308e-45a2-df00-5d95d375139a"
+      },
+      "execution_count": 42,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Seja bem vindo(a) ao Programa de Diagnóstico de Qualidade de Água! insira os dados abaixo para a análise.\n",
+            "Valor do pH: 6\n",
+            "Valor da Turbidez em UNT: 3\n",
+            "Valor do Oxigênio Dissolvido em mg/L: 7\n",
+            "Valor dos Coliformes Termotolerantes em 100ml da amostra: 0\n",
+            "Valor da DBO em mg/L: 3\n",
+            "Quantidade de Nitrato em mg/L: 3\n",
+            "Quantidade de Fosfato em mg/L: 0.1\n",
+            "-=--=--=--=--=--=--=--=--=--=--=--=--=--=--=--=--=--=--=--=--=--=--=--=--=--=--=--=--=--=-\n",
+            "O pH da amostra se encontra dentro do padrão estabelecido\n",
+            "A turbidez da amostra se encontra dentro do padrão estabelecido\n",
+            "O Oxigênio Dissolvido da amostra se encontra dentro do padrão estabelecido\n",
+            "O valor de Coliformes Termotolerantes da amostra está dentro do padrão estabelecido\n",
+            "O DBO da amostra está dentro do padrão estabelecido\n",
+            "O Nitrato da amostra está dentro do padrão estabelecido\n",
+            "O fosfato total da amostra está dentro do padrão estabelecido\n",
+            "=-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-=\n",
+            "Deseja fazer uma nova análise de qualidade de uma amostra de água [S/N:]s\n",
+            "Valor do pH: 3\n",
+            "Valor da Turbidez em UNT: 3\n",
+            "Valor do Oxigênio Dissolvido em mg/L: 8\n",
+            "Valor dos Coliformes Termotolerantes em 100ml da amostra: 0\n",
+            "Valor da DBO em mg/L: 3\n",
+            "Quantidade de Nitrato em mg/L: 3\n",
+            "Quantidade de Fosfato em mg/L: 3\n",
+            "-=--=--=--=--=--=--=--=--=--=--=--=--=--=--=--=--=--=--=--=--=--=--=--=--=--=--=--=--=--=-\n",
+            "O pH da amostra não está dentro do padrão estabelecido\n",
+            "A turbidez da amostra se encontra dentro do padrão estabelecido\n",
+            "O Oxigênio Dissolvido da amostra se encontra dentro do padrão estabelecido\n",
+            "O valor de Coliformes Termotolerantes da amostra está dentro do padrão estabelecido\n",
+            "O DBO da amostra está dentro do padrão estabelecido\n",
+            "O Nitrato da amostra está dentro do padrão estabelecido\n",
+            "O fosfato total da amostra não está dentro do padrão estabelecido\n",
+            "=-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-=\n",
+            "Deseja fazer uma nova análise de qualidade de uma amostra de água [S/N:]j\n",
+            "Não entendi. Deseja fazer a análise de qualidade de uma amostra de água [S/N:]n\n",
+            "=-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-=\n",
+            "Pelo menos uma das amostras de água NÃO está dentro dos padrões. Logo, de acordo com os padrões de qualidade estabelecidos pela Resolução CONAMA 357/2005, a água está IMPRÓPRIA\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# 6. Implemente um programa que utilize um loop while para calcular a soma dos números de 1 a 100.\n",
+        "soma = 0\n",
+        "n = 1\n",
+        "while n <= 100:\n",
+        "  soma += n\n",
+        "  n += 1\n",
+        "print(f'A soma dos números no intervalo de 1 a 100 é: {soma}')"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "utp852oNyhp8",
+        "outputId": "ae17e470-33e8-4b76-f2f9-66f3baa60881"
+      },
+      "execution_count": 33,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "A soma dos números no intervalo de 1 a 100 é: 5050\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# 7. Escreva um programa que imprima todos os números ímpares de 1 a 50 usando um loop for.\n",
+        "print(' Os números ímpares no intervalo de 1 a 50 sâo:')\n",
+        "for n in range(1,51):\n",
+        "  if n % 2 != 0:\n",
+        "    print(f'{n}', end=' ')"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "pgF_WtrtyhU9",
+        "outputId": "42a31f9a-aeab-4bad-92fe-a2604feead00"
+      },
+      "execution_count": 25,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            " Os números ímpares no intervalo de 1 a 50 sâo:\n",
+            "1 3 5 7 9 11 13 15 17 19 21 23 25 27 29 31 33 35 37 39 41 43 45 47 49 "
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# 8. Desenvolva um programa que utilize os objetos built-in do Python para realizar operações com listas e dicionários.\n",
+        "\n",
+        "numeros = [1, 2, 3, 4, 5, 2, 3, 1, 4, 2, 6] # lista de números\n",
+        "\n",
+        "media = sum(numeros) / len(numeros) # média dos números na lista - soma dos números dividido pela quantidade de números\n",
+        "print(f'Média dos números na lista: {media}')\n",
+        "\n",
+        "contagem = {} # dicionário para contar a frequência de cada número na lista\n",
+        "for num in numeros:\n",
+        "    if num in contagem:\n",
+        "        contagem[num] += 1\n",
+        "    else:\n",
+        "        contagem[num] = 1\n",
+        "\n",
+        "print('Contagem de cada número na lista:') # Imprimindo a contagem de cada número na lista\n",
+        "for num, quantidade in contagem.items():\n",
+        "    print(f'O número {num} aparece {quantidade} vezes na lista')"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "FKDt50DQygpe",
+        "outputId": "3ee1bf5f-5d52-492f-a032-470ee656fcf1"
+      },
+      "execution_count": 28,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Média dos números na lista: 3.0\n",
+            "Contagem de cada número na lista:\n",
+            "O número 1 aparece 2 vezes na lista\n",
+            "O número 2 aparece 3 vezes na lista\n",
+            "O número 3 aparece 2 vezes na lista\n",
+            "O número 4 aparece 2 vezes na lista\n",
+            "O número 5 aparece 1 vezes na lista\n",
+            "O número 6 aparece 1 vezes na lista\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
